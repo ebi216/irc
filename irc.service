@@ -1,0 +1,9 @@
+[Unit]
+Description=irc
+After=syslog.service
+
+[Service]
+ExecStart=/usr/bin/ruby -r /opt/irc/daemonize.rb /opt/irc/irc.rb
+
+[Install]
+WantedBy=multi-user.target
